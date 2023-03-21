@@ -21,7 +21,7 @@ const Login = () => {
                 </Link>
               </li>
               <li className="sidebar-item has-sub">
-                <a className="sidebar-link">
+                <a href="#" className="sidebar-link">
                   <i className="fa fa-table text-success"></i>
                   <span>Account</span>
                 </a>
