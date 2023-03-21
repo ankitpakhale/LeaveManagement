@@ -21,33 +21,33 @@ const Login = () => {
                 </Link>
               </li>
               <li className="sidebar-item has-sub">
-                <a href="#" className="sidebar-link">
+                <a className="sidebar-link">
                   <i className="fa fa-table text-success"></i>
                   <span>Account</span>
                 </a>
                 <ul className="submenu">
                   <li>
-                    <a href="Accountstatus.html">Account Status</a>
+                    <Link to="accountstatus">Account Status</Link>
                   </li>
                   <li>
-                    <a href="profile.html">Profile</a>
+                    <Link to="profile">Profile</Link>
                   </li>
                 </ul>
               </li>
               <li className="sidebar-item has-sub">
-                <a href="#" className="sidebar-link">
+                <a className="sidebar-link">
                   <i className="fa fa-users text-success"></i>
                   <span>Employees</span>
                 </a>
                 <ul className="submenu">
                   <li>
-                    <a href="add_employee.html">Add Employee</a>
+                    <Link to="add_employee">Add Employee</Link>
                   </li>
                   <li>
-                    <a href="manage_employee.html">Manage Employee</a>
+                    <Link to="manage_employee">Manage Employee</Link>
                   </li>
                   <li>
-                    <a href="showemplyee.html">Employee</a>
+                    <Link to="showemplyee">Employee</Link>
                   </li>
                 </ul>
               </li>
@@ -58,10 +58,10 @@ const Login = () => {
                 </a>
                 <ul className="submenu">
                   <li>
-                    <a href="apply_leave.html">Apply Leaves</a>
+                    <Link to="apply_leave">Apply Leaves</Link>
                   </li>
                   <li>
-                    <a href="all_leave.html">All Leaves</a>
+                    <Link to="all_leave">All Leaves</Link>
                   </li>
                 </ul>
               </li>
