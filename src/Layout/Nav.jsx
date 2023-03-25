@@ -28,7 +28,9 @@ const Nav = () => {
                 className="nav-link dropdown-toggle nav-link-lg nav-link-user"
               >
                 <div className="avatar me-1">
-                  <img src="assets/images/admin.png" alt="" srcset="" />
+                  <img 
+                  src={require("../assets/images/admin.png")}
+                  alt="" srcset="" />
                 </div>
                 <div className="d-none d-md-block d-lg-inline-block">
                   Hi,<span> Admin</span>
