@@ -53,31 +53,6 @@ const Login = () => {
                 </ul>
               </li>
 
-              {/* <li class="nav-item dropdown">
-                <Link
-                  class="nav-link dropdown-toggle"
-                  to="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Leave Management
-                </Link>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <Link class="dropdown-item" to="/apply_leave">
-                      Apply Leaves
-                    </Link>
-                  </li>
-                  <li>
-                    <Link class="dropdown-item" to="/all_leave">
-                      All Leaves
-                    </Link>
-                  </li>
-                </ul>
-              </li> */}
-
               <li className="sidebar-item has-sub">
                 <a className="sidebar-link">
                   <i className="fa fa-table text-success"></i>
