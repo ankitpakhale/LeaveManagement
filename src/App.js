@@ -4,7 +4,6 @@ import "./assets/css/bootstrap.css";
 import "./assets/css/app.css";
 
 import Navbar from "./Layout/Navbar";
-import Footer from "./Layout/Footer";
 
 import Index from "./Component/Index";
 import Login from "./Component/Login";
@@ -33,7 +32,6 @@ function App() {
           <Route path="/profile" exact element={<Profile />} />
           <Route path="/showemplyee" exact element={<Showemplyee />} />
         </Routes>
-        <Footer />
       </Router>
     </>
   );
