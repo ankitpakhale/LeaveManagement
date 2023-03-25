@@ -21,6 +21,7 @@ const Login = () => {
                   <span>Dashboard</span>
                 </Link>
               </li>
+
               <li className="sidebar-item has-sub">
                 <a className="sidebar-link">
                   <i className="fa fa-table text-success"></i>
@@ -35,6 +36,7 @@ const Login = () => {
                   </li>
                 </ul>
               </li>
+
               <li className="sidebar-item has-sub">
                 <a className="sidebar-link">
                   <i className="fa fa-users text-success"></i>
@@ -67,6 +69,7 @@ const Login = () => {
                   </li>
                 </ul>
               </li>
+
             </ul>
           </div>
           <button className="sidebar-toggler btn x">
