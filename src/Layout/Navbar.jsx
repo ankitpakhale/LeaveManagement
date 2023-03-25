@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 const Login = () => {
   return (
     <>
@@ -14,8 +15,7 @@ const Login = () => {
           </div>
 
           <div className="sidebar-menu">
-            <ul className="menu">
-              
+            <ul id="basic-navbar-nav">
               <li className="sidebar-item active">
                 <Link to="/" className="sidebar-link">
                   <i className="fa fa-home text-success"></i>
