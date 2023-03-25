@@ -19,7 +19,7 @@ const Showemplyee = () => {
                   designation={"Data Scientist"}
                 />
               </div>
-              
+
               <div className="col-xl-4 col-md-12 mb-4">
                 <EmployeeBox
                   img={require("../assets/images/employeeimg.jpg")}
@@ -27,7 +27,7 @@ const Showemplyee = () => {
                   designation={"Data Scientist"}
                 />
               </div>
-              
+
               <div className="col-xl-4 col-md-12 mb-4">
                 <EmployeeBox
                   img={require("../assets/images/employeeimg.jpg")}
@@ -35,7 +35,7 @@ const Showemplyee = () => {
                   designation={"Data Scientist"}
                 />
               </div>
-              
+
               <div className="col-xl-4 col-md-12 mb-4">
                 <EmployeeBox
                   img={require("../assets/images/employeeimg.jpg")}
@@ -43,7 +43,7 @@ const Showemplyee = () => {
                   designation={"Data Scientist"}
                 />
               </div>
-              
+
               <div className="col-xl-4 col-md-12 mb-4">
                 <EmployeeBox
                   img={require("../assets/images/employeeimg.jpg")}
@@ -51,7 +51,7 @@ const Showemplyee = () => {
                   designation={"Data Scientist"}
                 />
               </div>
-              
+
               <div className="col-xl-4 col-md-12 mb-4">
                 <EmployeeBox
                   img={require("../assets/images/employeeimg.jpg")}
@@ -59,7 +59,7 @@ const Showemplyee = () => {
                   designation={"Data Scientist"}
                 />
               </div>
-              
+
               <div className="col-xl-4 col-md-12 mb-4">
                 <EmployeeBox
                   img={require("../assets/images/employeeimg.jpg")}
@@ -67,7 +67,6 @@ const Showemplyee = () => {
                   designation={"Data Scientist"}
                 />
               </div>
-              
             </div>
           </section>
         </div>
