@@ -9,7 +9,7 @@ const Login = () => {
             className="sidebar-header"
             style={{ height: "50px", marginTop: "-30px" }}
           >
-            <i className="fa fa-users text-success me-4"></i>
+            <i className="fa fa-users text-success me-4 fa-1x"></i>
             <span>ELMS</span>
           </div>
           <div className="sidebar-menu">
@@ -21,16 +21,16 @@ const Login = () => {
                 </Link>
               </li>
               <li className="sidebar-item has-sub">
-                <a href="#" className="sidebar-link">
+                <a className="sidebar-link">
                   <i className="fa fa-table text-success"></i>
                   <span>Account</span>
                 </a>
                 <ul className="submenu">
                   <li>
-                    <Link to="accountstatus">Account Status</Link>
+                    <Link to="/accountstatus">Account Status</Link>
                   </li>
                   <li>
-                    <Link to="profile">Profile</Link>
+                    <Link to="/profile">Profile</Link>
                   </li>
                 </ul>
               </li>
@@ -41,27 +41,27 @@ const Login = () => {
                 </a>
                 <ul className="submenu">
                   <li>
-                    <Link to="add_employee">Add Employee</Link>
+                    <Link to="/add_employee">Add Employee</Link>
                   </li>
                   <li>
-                    <Link to="manage_employee">Manage Employee</Link>
+                    <Link to="/manage_employee">Manage Employee</Link>
                   </li>
                   <li>
-                    <Link to="showemplyee">Employee</Link>
+                    <Link to="/showemplyee">Employee</Link>
                   </li>
                 </ul>
               </li>
               <li className="sidebar-item has-sub">
-                <a href="#" className="sidebar-link">
+                <a className="sidebar-link">
                   <i className="fa fa-table text-success"></i>
                   <span>Leave Management</span>
                 </a>
                 <ul className="submenu">
                   <li>
-                    <Link to="apply_leave">Apply Leaves</Link>
+                    <Link to="/apply_leave">Apply Leaves</Link>
                   </li>
                   <li>
-                    <Link to="all_leave">All Leaves</Link>
+                    <Link to="/all_leave">All Leaves</Link>
                   </li>
                 </ul>
               </li>
