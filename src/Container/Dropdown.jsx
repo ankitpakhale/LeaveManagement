@@ -11,7 +11,7 @@ const Dropdown = (props) => {
   return (
     <>
       <div className="dropdown mx-4">
-        <i className="fa fa-table text-success"></i>
+        <i className={`fa fa-${props.type} text-success`}></i>
         <button
           style={{ all: "unset" }}
           className="dropdown-toggle p-3 pb-0"
@@ -23,11 +23,13 @@ const Dropdown = (props) => {
           className={`dropdown-menu border-0 ${isDropdownOpen ? "show" : ""}`}
         >
           {props.options.map((option, index) => (
-            <li key={index}>
-              <Link className="text-secondary" to={option.url}>
-                {option.label}
-              </Link>
-            </li>
+            <>
+              <li key={index} className="py-2">
+                <Link className="text-secondary" to={option.url}>
+                  {option.label}
+                </Link>
+              </li>
+            </>
           ))}
         </ul>
       </div>

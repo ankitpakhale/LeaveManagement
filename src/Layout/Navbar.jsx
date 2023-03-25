@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Dropdown from "../Container/Dropdown";
-// import "../assets/css/navbar.css";
+import "../assets/css/navbar.css";
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -22,73 +22,52 @@ const Navbar = () => {
 
           <div className="sidebar-menu">
             <ul className="menu">
-              <li className="sidebar-item active">
+              <li className="sidebar-item">
                 <Link to="/" className="sidebar-link">
                   <i class="fa fa-home text-success"></i>
-                  <span>Dashboard</span>
+                  <span className="text-secondary">Dashboard</span>
                 </Link>
               </li>
-              <li class="sidebar-item has-sub">
-                <a href="#" class="sidebar-link">
-                  <i class="fa fa-table text-success"></i>
-                  <span>Account</span>
-                </a>
-                <ul class="submenu">
-                  <li>
-                    <Link to="/accountstatus">Account Status</Link>
-                  </li>
-                  <li>
-                    <Link to="/profile">Profile</Link>
-                  </li>
-                </ul>
-              </li>
-              <li class="sidebar-item has-sub">
-                <a href="#" class="sidebar-link">
-                  <i class="fa fa-users text-success"></i>
-                  <span>Employees</span>
-                </a>
-                <ul class="submenu">
-                  <li>
-                    <Link to="/add_employee">Add Employee</Link>
-                  </li>
-                  <li>
-                    <Link to="/manage_employee">Manage Employee</Link>
-                  </li>
-                  <li>
-                    <Link to="/showemplyee">Employee</Link>
-                  </li>
-                </ul>
-              </li>
-              <li class="sidebar-item has-sub">
-                <a href="#" class="sidebar-link">
-                  <i class="fa fa-table text-success"></i>
-                  <span>Leave Management</span>
-                </a>
-                <ul class="submenu">
-                  <li>
-                    <Link to="/apply_leave">Apply Leaves</Link>
-                  </li>
-                  <li>
-                    <Link to="/all_leave">All Leaves</Link>
-                  </li>
-                </ul>
-              </li>
+
+              <Dropdown
+                type="table"
+                label="Account"
+                options={[
+                  {
+                    label: "Account Status",
+                    url: "/accountstatus",
+                  },
+                  { label: "Profile", url: "/profile" },
+                ]}
+              />
+              <Dropdown
+                type="users"
+                label="Employees"
+                options={[
+                  {
+                    label: "Add Employee",
+                    url: "/add_employee",
+                  },
+                  { label: "Manage Employee", url: "/manage_employee" },
+                  { label: "Employee", url: "/showemplyee" },
+                ]}
+              />
+              <Dropdown
+                type="table"
+                label="Leave Management"
+                options={[
+                  {
+                    label: "Apply Leaves",
+                    url: "/apply_leave",
+                  },
+                  { label: "All Leaves", url: "/all_leave" },
+                ]}
+              />
             </ul>
           </div>
           <button class="sidebar-toggler btn x">
             <i data-feather="x"></i>
           </button>
-
-          <Dropdown
-            label="Account"
-            options={[
-              {
-                label: "Account Status",
-                url: "/accountstatus",
-              },
-              { label: "Profile", url: "/profile" },
-            ]}
-          />
         </div>
       </div>
     </>
