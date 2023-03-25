@@ -52,8 +52,8 @@ const Nav = () => {
       </nav> */}
 
       <nav className="navbar navbar-header navbar-expand navbar-light">
-        <a class="sidebar-toggler" href="#">
-          <span class="navbar-toggler-icon"></span>
+        <a className="sidebar-toggler" href="#">
+          <span className="navbar-toggler-icon"></span>
         </a>
         <button
           className="btn navbar-toggler"

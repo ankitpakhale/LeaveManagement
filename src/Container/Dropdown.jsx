@@ -25,7 +25,11 @@ const Dropdown = (props) => {
           {props.options.map((option, index) => (
             <>
               <li key={index} className="py-2">
-                <Link className="text-secondary" to={option.url}>
+                <Link
+                  className="text-secondary"
+                  to={option.url}
+                  onClick={() => setIsDropdownOpen(false)}
+                >
                   {option.label}
                 </Link>
               </li>
