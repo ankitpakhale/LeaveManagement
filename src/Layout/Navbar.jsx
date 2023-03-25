@@ -30,7 +30,7 @@ const Navbar = () => {
               </li>
 
               <Dropdown
-                type="table"
+                type="receipt"
                 label="Account"
                 options={[
                   {
