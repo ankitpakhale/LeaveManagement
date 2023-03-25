@@ -15,6 +15,7 @@ const Login = () => {
 
           <div className="sidebar-menu">
             <ul className="menu">
+              
               <li className="sidebar-item active">
                 <Link to="/" className="sidebar-link">
                   <i className="fa fa-home text-success"></i>
@@ -69,7 +70,6 @@ const Login = () => {
                   </li>
                 </ul>
               </li>
-
             </ul>
           </div>
           <button className="sidebar-toggler btn x">
