@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Nav from "../Layout/Nav";
 const Add_employee = () => {
   return (
@@ -16,9 +17,9 @@ const Add_employee = () => {
                 <nav aria-label="breadcrumb" className="breadcrumb-header">
                   <ol className="breadcrumb">
                     <li className="breadcrumb-item">
-                      <a href="index.html" className="text-success">
+                      <Link to="/" className="text-success">
                         Dashboard
-                      </a>
+                      </Link>
                     </li>
                     <li className="breadcrumb-item active" aria-current="page">
                       Add Employee
@@ -57,7 +58,10 @@ const Add_employee = () => {
                               <label for="first-name-icon">Gender</label>
                               <div className="position-relative">
                                 <fieldset className="form-group">
-                                  <select className="form-select" id="basicSelect">
+                                  <select
+                                    className="form-select"
+                                    id="basicSelect"
+                                  >
                                     <option>Male</option>
                                     <option>Female</option>
                                   </select>
@@ -181,7 +185,10 @@ const Add_employee = () => {
                             <div className="form-group">
                               <label for="country-floating">Deapartment</label>
                               <fieldset className="form-group">
-                                <select className="form-select" id="basicSelect">
+                                <select
+                                  className="form-select"
+                                  id="basicSelect"
+                                >
                                   <option>IT</option>
                                   <option>HR</option>
                                   <option>Marketing</option>
@@ -193,7 +200,10 @@ const Add_employee = () => {
                             <div className="form-group">
                               <label for="company-column">Designation</label>
                               <fieldset className="form-group">
-                                <select className="form-select" id="basicSelect">
+                                <select
+                                  className="form-select"
+                                  id="basicSelect"
+                                >
                                   <option>Project Manager.</option>
                                   <option>SR.</option>
                                   <option>JR.</option>
@@ -206,7 +216,10 @@ const Add_employee = () => {
                             <div className="form-group">
                               <label for="company-column">status</label>
                               <fieldset className="form-group">
-                                <select className="form-select" id="basicSelect">
+                                <select
+                                  className="form-select"
+                                  id="basicSelect"
+                                >
                                   <option>Active</option>
                                   <option>Deactivated</option>
                                 </select>
