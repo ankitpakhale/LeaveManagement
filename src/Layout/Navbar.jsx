@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Dropdown from "../Container/Dropdown";
+// import "../assets/css/navbar.css";
 
-const Login = () => {
+const Navbar = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
   return (
     <>
       <div id="sidebar" className="active">
@@ -15,20 +21,19 @@ const Login = () => {
           </div>
 
           <div className="sidebar-menu">
-            <ul id="basic-navbar-nav">
+            <ul className="menu">
               <li className="sidebar-item active">
                 <Link to="/" className="sidebar-link">
-                  <i className="fa fa-home text-success"></i>
+                  <i class="fa fa-home text-success"></i>
                   <span>Dashboard</span>
                 </Link>
               </li>
-
-              <li className="sidebar-item has-sub">
-                <a className="sidebar-link">
-                  <i className="fa fa-table text-success"></i>
+              <li class="sidebar-item has-sub">
+                <a href="#" class="sidebar-link">
+                  <i class="fa fa-table text-success"></i>
                   <span>Account</span>
                 </a>
-                <ul className="submenu">
+                <ul class="submenu">
                   <li>
                     <Link to="/accountstatus">Account Status</Link>
                   </li>
@@ -37,13 +42,12 @@ const Login = () => {
                   </li>
                 </ul>
               </li>
-
-              <li className="sidebar-item has-sub">
-                <a className="sidebar-link">
-                  <i className="fa fa-users text-success"></i>
+              <li class="sidebar-item has-sub">
+                <a href="#" class="sidebar-link">
+                  <i class="fa fa-users text-success"></i>
                   <span>Employees</span>
                 </a>
-                <ul className="submenu">
+                <ul class="submenu">
                   <li>
                     <Link to="/add_employee">Add Employee</Link>
                   </li>
@@ -55,13 +59,12 @@ const Login = () => {
                   </li>
                 </ul>
               </li>
-
-              <li className="sidebar-item has-sub">
-                <a className="sidebar-link">
-                  <i className="fa fa-table text-success"></i>
+              <li class="sidebar-item has-sub">
+                <a href="#" class="sidebar-link">
+                  <i class="fa fa-table text-success"></i>
                   <span>Leave Management</span>
                 </a>
-                <ul className="submenu">
+                <ul class="submenu">
                   <li>
                     <Link to="/apply_leave">Apply Leaves</Link>
                   </li>
@@ -72,12 +75,23 @@ const Login = () => {
               </li>
             </ul>
           </div>
-          <button className="sidebar-toggler btn x">
+          <button class="sidebar-toggler btn x">
             <i data-feather="x"></i>
           </button>
+
+          <Dropdown
+            label="Account"
+            options={[
+              {
+                label: "Account Status",
+                url: "/accountstatus",
+              },
+              { label: "Profile", url: "/profile" },
+            ]}
+          />
         </div>
       </div>
     </>
   );
 };
-export default Login;
+export default Navbar;

@@ -13,7 +13,7 @@ const Index = () => {
           <section className="section">
             <div className="row mb-2">
               <div className="col-xl-6 col-md-12 mb-6">
-                <Link to="/employee">
+                <Link to="/manage_employee">
                   <div className="card">
                     <div className="card-body">
                       <div className="d-flex justify-content-between p-md-1">
