@@ -12,6 +12,7 @@ const Login = () => {
             <i className="fa fa-users text-success me-4 fa-1x"></i>
             <span>ELMS</span>
           </div>
+
           <div className="sidebar-menu">
             <ul className="menu">
               <li className="sidebar-item active">
