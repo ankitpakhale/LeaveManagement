@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Dropdown from "../Container/Dropdown";
 
 const Nav = () => {
   return (
@@ -75,24 +76,19 @@ const Nav = () => {
                 className="nav-link dropdown-toggle nav-link-lg nav-link-user"
               >
                 <div className="avatar me-1">
-                  <img
-                    src={require("../assets/images/admin.png")}
-                    alt=""
-                    srcset=""
+                  <Dropdown
+                    type="user"
+                    label="Hi Admin"
+                    options={[
+                      {
+                        label: "Login",
+                        url: "/login",
+                      },
+                      { label: "Logout", url: "/" },
+                    ]}
                   />
                 </div>
-                <div className="d-none d-md-block d-lg-inline-block">
-                  Hi,<span> Admin</span>
-                </div>
               </a>
-              <div className="dropdown-menu dropdown-menu-end">
-                <Link className="dropdown-item" to="/login">
-                  <i data-feather="settings"></i> Login
-                </Link>
-                <Link className="dropdown-item" to="">
-                  <i data-feather="log-out"></i> Logout
-                </Link>
-              </div>
             </li>
           </ul>
         </div>
