@@ -20,24 +20,18 @@ function App() {
   return (
     <>
       <Router>
-        <div id="app">
-          <Navbar />
-          <Routes>
-            <Route path="/" exact element={<Index />} />
-            <Route path="/accountstatus" exact element={<Accountstatus />} />
-            <Route path="/add_employee" exact element={<Add_employee />} />
-            <Route path="/all_leave" exact element={<All_leave />} />
-            <Route path="/apply_leave" exact element={<Apply_leave />} />
-            <Route path="/login" exact element={<Login />} />
-            <Route
-              path="/manage_employee"
-              exact
-              element={<Manage_employee />}
-            />
-            <Route path="/profile" exact element={<Profile />} />
-            <Route path="/showemplyee" exact element={<Showemplyee />} />
-          </Routes>
-        </div>
+        <Navbar />
+        <Routes>
+          <Route path="/" exact element={<Index />} />
+          <Route path="/accountstatus" exact element={<Accountstatus />} />
+          <Route path="/add_employee" exact element={<Add_employee />} />
+          <Route path="/all_leave" exact element={<All_leave />} />
+          <Route path="/apply_leave" exact element={<Apply_leave />} />
+          <Route path="/login" exact element={<Login />} />
+          <Route path="/manage_employee" exact element={<Manage_employee />} />
+          <Route path="/profile" exact element={<Profile />} />
+          <Route path="/showemplyee" exact element={<Showemplyee />} />
+        </Routes>
       </Router>
     </>
   );

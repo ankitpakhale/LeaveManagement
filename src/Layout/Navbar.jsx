@@ -1,76 +1,155 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import Dropdown from "../Container/Dropdown";
-import "../assets/css/navbar.css";
 
 const Navbar = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
   return (
     <>
-      <div id="sidebar" className="active">
-        <div className="sidebar-wrapper active">
-          <div
-            className="sidebar-header"
-            style={{ height: "50px", marginTop: "-30px" }}
-          >
+      <nav className="navbar navbar-expand-lg navbar-light bg-light mb-4">
+        <div className="container-fluid">
+          <Link className="navbar-brand" to="/">
             <i className="fa fa-users text-success me-4 fa-1x"></i>
-            <span>ELMS</span>
-          </div>
-
-          <div className="sidebar-menu">
-            <ul className="menu">
-              <li className="sidebar-item">
-                <Link to="/" className="sidebar-link">
-                  <i class="fa fa-home text-success"></i>
-                  <span className="text-secondary">Dashboard</span>
+            <span className="">ELMS</span>
+          </Link>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/">
+                  Dashboard
                 </Link>
               </li>
 
-              <Dropdown
-                type="receipt"
-                label="Account"
-                options={[
-                  {
-                    label: "Account Status",
-                    url: "/accountstatus",
-                  },
-                  { label: "Profile", url: "/profile" },
-                ]}
-              />
-              <Dropdown
-                type="users"
-                label="Employees"
-                options={[
-                  {
-                    label: "Add Employee",
-                    url: "/add_employee",
-                  },
-                  { label: "Manage Employee", url: "/manage_employee" },
-                  { label: "Employee", url: "/showemplyee" },
-                ]}
-              />
-              <Dropdown
-                type="table"
-                label="Leave Management"
-                options={[
-                  {
-                    label: "Apply Leaves",
-                    url: "/apply_leave",
-                  },
-                  { label: "All Leaves", url: "/all_leave" },
-                ]}
-              />
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fa fa-table text-success"></i>
+                  Account
+                </a>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <Link className="dropdown-item" to="/accountstatus">
+                      Account Status
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/profile">
+                      Profile
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fa fa-users text-success"></i>
+                  Employees
+                </a>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <Link className="dropdown-item" to="/add_employee">
+                      Add Employee
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/manage_employee">
+                      Manage Employee
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/showemplyee">
+                      Employee
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fa fa-table text-success"></i>
+                  Leave Management
+                </a>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <Link className="dropdown-item" to="/apply_leave">
+                      Apply Leaves
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/all_leave">
+                      All Leaves
+                    </Link>
+                  </li>
+                </ul>
+              </li>
             </ul>
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <div class="d-none d-md-block d-lg-inline-block">
+                  <div class="avatar me-1">
+                    <img
+                      src={require("../assets/images/admin.png")}
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                  Hi,<span> Admin</span>
+                </div>
+              </a>
+              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <Link className="dropdown-item" to="/login">
+                    Login
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/">
+                    Logout
+                  </Link>
+                </li>
+              </ul>
+            </li>
           </div>
-          <button class="sidebar-toggler btn x">
-            <i data-feather="x"></i>
-          </button>
         </div>
-      </div>
+      </nav>
     </>
   );
 };
+
 export default Navbar;
