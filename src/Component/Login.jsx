@@ -2,7 +2,7 @@ import React from "react";
 const Login = () => {
   return (
     <>
-      <div id="auth">
+      <div id="auth" className="mb-4">
         <div className="container">
           <div className="row">
             <div className="col-md-5 col-sm-12 mx-auto">

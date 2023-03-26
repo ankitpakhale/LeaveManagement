@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light mb-4">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             <i className="fa fa-users text-success me-4 fa-1x"></i>
-            <span className="">ELMS</span>
+            <span className="text-white">ELMS</span>
           </Link>
           <button
             className="navbar-toggler"
@@ -24,14 +24,18 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">
+                <Link
+                  className="nav-link active text-white"
+                  aria-current="page"
+                  to="/"
+                >
                   Dashboard
                 </Link>
               </li>
 
               <li className="nav-item dropdown">
                 <a
-                  className="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle text-white"
                   href="#"
                   id="navbarDropdown"
                   role="button"
@@ -57,7 +61,7 @@ const Navbar = () => {
 
               <li className="nav-item dropdown">
                 <a
-                  className="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle text-white"
                   href="#"
                   id="navbarDropdown"
                   role="button"
@@ -88,7 +92,7 @@ const Navbar = () => {
 
               <li className="nav-item dropdown">
                 <a
-                  className="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle text-white"
                   href="#"
                   id="navbarDropdown"
                   role="button"
