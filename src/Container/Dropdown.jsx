@@ -29,7 +29,7 @@ const Dropdown = (props) => {
                 to={option.url}
                 onClick={() => setIsDropdownOpen(false)}
               >
-                <li key={index} className="py-2 border border-danger">
+                <li key={index} className="py-2">
                   {option.label}
                 </li>
               </Link>
