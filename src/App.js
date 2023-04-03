@@ -16,7 +16,6 @@ import Manage_employee from "./Component/Manage_employee";
 import Profile from "./Component/Profile";
 import Showemplyee from "./Component/Showemplyee";
 
-
 function App() {
   return (
     <>
